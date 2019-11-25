@@ -26,6 +26,11 @@ spec:
         - name: get-ip-server
           containerPort: 8080
           protocol: TCP
+        resources:
+          limits:
+            memory: 512Mi
+          requests:
+            memory: 128Mi
       imagePullSecrets:
       - name:  ${OKE_IMAGESECRET}
 
